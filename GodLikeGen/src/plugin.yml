@@ -1,0 +1,10 @@
+name: GodLikeGen
+version: 1.0.0
+author: JatinSingh
+main: me.jatinsingh.glgb.Main
+description: Cobblestone/Sand/Obsidian Gen Buckets plugin.
+
+commands:
+  glgb:
+    usage: /<command>
+    description: GodLikeGen's plug in command , for giving players Gen Buckets and more.
