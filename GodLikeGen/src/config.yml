@@ -11,11 +11,12 @@
 GenBuckets:
 
   CobbleStone:
-    Display_Name: 
+    Display_Name: &cCobbleStone Gen Bucket
     Lore:
-    -
+    - 
     -
     Price: 200
+    Enchant_Effect: false
     Delay: 1
   
   Sand:
@@ -24,13 +25,15 @@ GenBuckets:
     -
     -
     Price: 500
+    Enchant_Effect: true
     Delay: 1
   
   Obsidian:
-    Display_Name: 
+    Display_Name: Obsidian Gen Bucket
     Lore:
     -
     -
     Price: 2000
+    Enchant_Effect: true
     Delay: 1
     
