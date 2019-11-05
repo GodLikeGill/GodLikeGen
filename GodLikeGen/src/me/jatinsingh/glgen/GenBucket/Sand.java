@@ -16,7 +16,7 @@ private Main plugin;
 		this.plugin = plugin;
 	}
 	
-	public void CobbleGen() {
+	public ItemStack SandGen() {
 		
 		ItemStack sandgb = new ItemStack(Material.LAVA_BUCKET, 1);
 		ItemMeta sandgbmeta = sandgb.getItemMeta();
@@ -29,5 +29,7 @@ private Main plugin;
 			sandgb.setItemMeta(sandgbmeta);
 			sandgb.addUnsafeEnchantment(Enchantment.DURABILITY, 1);
 		}
+		
+		return sandgb;
 	}
 }

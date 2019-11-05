@@ -16,7 +16,7 @@ private Main plugin;
 		this.plugin = plugin;
 	}
 	
-	public void CobbleGen() {
+	public ItemStack ObsidianGen() {
 		
 		ItemStack obsidiangb = new ItemStack(Material.LAVA_BUCKET, 1);
 		ItemMeta obsidiangbmeta = obsidiangb.getItemMeta();
@@ -29,5 +29,7 @@ private Main plugin;
 			obsidiangb.setItemMeta(obsidiangbmeta);
 			obsidiangb.addUnsafeEnchantment(Enchantment.DURABILITY, 1);
 		}
+		
+		return obsidiangb;
 	}
 }

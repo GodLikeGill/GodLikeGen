@@ -16,7 +16,7 @@ public class Cobble {
 		this.plugin = plugin;
 	}
 	
-	public void CobbleGen() {
+	public ItemStack CobbleGen() {
 		
 		ItemStack cobblegb = new ItemStack(Material.LAVA_BUCKET, 1);
 		ItemMeta cobblegbmeta = cobblegb.getItemMeta();
@@ -29,5 +29,7 @@ public class Cobble {
 			cobblegb.setItemMeta(cobblegbmeta);
 			cobblegb.addUnsafeEnchantment(Enchantment.DURABILITY, 1);
 		}
+		
+		return cobblegb;
 	}
 }
