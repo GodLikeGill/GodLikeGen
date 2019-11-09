@@ -1,6 +1,9 @@
 package me.jatinsingh.glgen.Listeners;
 
+import org.bukkit.Location;
 import org.bukkit.Material;
+import org.bukkit.block.Block;
+import org.bukkit.block.BlockFace;
 import org.bukkit.event.EventHandler;
 import org.bukkit.event.player.PlayerBucketEmptyEvent;
 
@@ -21,7 +24,18 @@ public class ObsidianGen {
 	public void onCobbleGen(PlayerBucketEmptyEvent e) {
 		
 		Material bucket = e.getBucket();
-		if(bucket.equals(obsidian.ObsidianGen().getType())) {
+		if(bucket.equals(obsidian.VerticalObsidianGen().getType())) {
+			
+			Block b = e.getBlockClicked();
+			BlockFace face = e.getBlockFace();
+			Location loc = b.getLocation();
+			
+			if(face.toString().equals("DOWN")) {
+				
+				for(int i)
+			}
+		}
+		if(bucket.equals(obsidian.HorizontalObsidianGen().getType())) {
 			
 			
 		}

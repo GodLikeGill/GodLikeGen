@@ -11,13 +11,24 @@
 GenBuckets:
 
   CobbleStone:
-    Display_Name: &cCobbleStone Gen Bucket
-    Lore:
-    - 
-    -
-    Price: 200
-    Enchant_Effect: false
-    Delay: 1
+  
+    Vertical:
+      Display_Name: &cCobbleGenBucket (Vertical)
+      Lore:
+      - 
+      -
+      Price: 200
+      Enchant_Effect: false
+      Delay: 1
+    
+    Horizontal:
+      Display_Name: &cCobbleGenBucket (Horizontal)
+      Lore:
+      - 
+      -
+      Price: 200
+      Enchant_Effect: false
+      Delay: 1
   
   Sand:
     Display_Name: Sand Gen Bucket

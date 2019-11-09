@@ -16,20 +16,35 @@ private Main plugin;
 		this.plugin = plugin;
 	}
 	
-	public ItemStack ObsidianGen() {
+	public ItemStack VerticalObsidianGen() {
 		
-		ItemStack obsidiangb = new ItemStack(Material.LAVA_BUCKET, 1);
-		ItemMeta obsidiangbmeta = obsidiangb.getItemMeta();
-		obsidiangbmeta.setDisplayName(plugin.color(plugin.getConfig().getString("GenBuckets.Obsidian.Display_Name")));
-		obsidiangbmeta.setLore(plugin.color(plugin.getConfig().getStringList("GenBuckets.Obsidian.Display_Name")));
-		obsidiangb.setItemMeta(obsidiangbmeta);
+		ItemStack verobsidiangb = new ItemStack(Material.LAVA_BUCKET, 1);
+		ItemMeta verobsidiangbmeta = verobsidiangb.getItemMeta();
+		verobsidiangbmeta.setDisplayName(plugin.color(plugin.getConfig().getString("GenBuckets.Obsidian.Vertical.Display_Name")));
+		verobsidiangbmeta.setLore(plugin.color(plugin.getConfig().getStringList("GenBuckets.Obsidian.Vertical.Lore")));
+		verobsidiangb.setItemMeta(verobsidiangbmeta);
 		
-		if(plugin.getConfig().getBoolean(("GenBuckets.Obsidian.Enchant_Effect"))) {
-			obsidiangbmeta.addItemFlags(ItemFlag.HIDE_ENCHANTS);
-			obsidiangb.setItemMeta(obsidiangbmeta);
-			obsidiangb.addUnsafeEnchantment(Enchantment.DURABILITY, 1);
+		if(plugin.getConfig().getBoolean(("GenBuckets.Obsidian.Vertical.Enchant_Effect"))) {
+			verobsidiangbmeta.addItemFlags(ItemFlag.HIDE_ENCHANTS);
+			verobsidiangb.setItemMeta(verobsidiangbmeta);
+			verobsidiangb.addUnsafeEnchantment(Enchantment.DURABILITY, 1);
 		}
+		return verobsidiangb;
+	}
+	
+	public ItemStack HorizontalObsidianGen() {
 		
-		return obsidiangb;
+		ItemStack horobsidiangb = new ItemStack(Material.LAVA_BUCKET, 1);
+		ItemMeta horobsidiangbmeta = horobsidiangb.getItemMeta();
+		horobsidiangbmeta.setDisplayName(plugin.color(plugin.getConfig().getString("GenBuckets.Obsidian.Horizontal.Display_Name")));
+		horobsidiangbmeta.setLore(plugin.color(plugin.getConfig().getStringList("GenBuckets.Obsidian.Horizontal.Lore")));
+		horobsidiangb.setItemMeta(horobsidiangbmeta);
+		
+		if(plugin.getConfig().getBoolean(("GenBuckets.Obsidian.Horizontal.Enchant_Effect"))) {
+			horobsidiangbmeta.addItemFlags(ItemFlag.HIDE_ENCHANTS);
+			horobsidiangb.setItemMeta(horobsidiangbmeta);
+			horobsidiangb.addUnsafeEnchantment(Enchantment.DURABILITY, 1);
+		}
+		return horobsidiangb;
 	}
 }

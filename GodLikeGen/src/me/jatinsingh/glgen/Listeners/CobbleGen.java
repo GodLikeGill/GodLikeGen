@@ -22,7 +22,12 @@ public class CobbleGen implements Listener {
 	public void onCobbleGen(PlayerBucketEmptyEvent e) {
 		
 		Material bucket = e.getBucket();
-		if(bucket.equals(cobble.CobbleGen().getType())) {
+		if(bucket.equals(cobble.VerticalCobbleGen().getType())) {
+			
+			
+		}
+		
+		if(bucket.equals(cobble.HorizontalCobbleGen().getType())) {
 			
 			
 		}

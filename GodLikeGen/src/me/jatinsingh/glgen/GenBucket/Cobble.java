@@ -16,20 +16,36 @@ public class Cobble {
 		this.plugin = plugin;
 	}
 	
-	public ItemStack CobbleGen() {
+	public ItemStack VerticalCobbleGen() {
 		
-		ItemStack cobblegb = new ItemStack(Material.LAVA_BUCKET, 1);
-		ItemMeta cobblegbmeta = cobblegb.getItemMeta();
-		cobblegbmeta.setDisplayName(plugin.color(plugin.getConfig().getString("GenBuckets.CobbleStone.Display_Name")));
-		cobblegbmeta.setLore(plugin.color(plugin.getConfig().getStringList("GenBuckets.CobbleStone.Display_Name")));
-		cobblegb.setItemMeta(cobblegbmeta);
+		ItemStack vercobblegb = new ItemStack(Material.LAVA_BUCKET, 1);
+		ItemMeta vercobblegbmeta = vercobblegb.getItemMeta();
+		vercobblegbmeta.setDisplayName(plugin.color(plugin.getConfig().getString("GenBuckets.CobbleStone.Vertical.Display_Name")));
+		vercobblegbmeta.setLore(plugin.color(plugin.getConfig().getStringList("GenBuckets.CobbleStone.Vertical.Display_Name")));
+		vercobblegb.setItemMeta(vercobblegbmeta);
 		
-		if(plugin.getConfig().getBoolean(("GenBuckets.CobbleStone.Enchant_Effect"))) {
-			cobblegbmeta.addItemFlags(ItemFlag.HIDE_ENCHANTS);
-			cobblegb.setItemMeta(cobblegbmeta);
-			cobblegb.addUnsafeEnchantment(Enchantment.DURABILITY, 1);
+		if(plugin.getConfig().getBoolean(("GenBuckets.CobbleStone.Vertical.Enchant_Effect"))) {
+			vercobblegbmeta.addItemFlags(ItemFlag.HIDE_ENCHANTS);
+			vercobblegb.setItemMeta(vercobblegbmeta);
+			vercobblegb.addUnsafeEnchantment(Enchantment.DURABILITY, 1);
 		}
-		
-		return cobblegb;
+		return vercobblegb;
 	}
+	
+	public ItemStack HorizontalCobbleGen() {
+		
+		ItemStack horcobblegb = new ItemStack(Material.LAVA_BUCKET, 1);
+		ItemMeta horcobblegbmeta = horcobblegb.getItemMeta();
+		horcobblegbmeta.setDisplayName(plugin.color(plugin.getConfig().getString("GenBuckets.CobbleStone.Horizontal.Display_Name")));
+		horcobblegbmeta.setLore(plugin.color(plugin.getConfig().getStringList("GenBuckets.CobbleStone.Horizontal.Display_Name")));
+		horcobblegb.setItemMeta(horcobblegbmeta);
+		
+		if(plugin.getConfig().getBoolean(("GenBuckets.CobbleStone.Horizontal.Enchant_Effect"))) {
+			horcobblegbmeta.addItemFlags(ItemFlag.HIDE_ENCHANTS);
+			horcobblegb.setItemMeta(horcobblegbmeta);
+			horcobblegb.addUnsafeEnchantment(Enchantment.DURABILITY, 1);
+		}
+		return horcobblegb;
+	}
+	
 }
