@@ -32,7 +32,6 @@ public class ObsidianGen {
 			
 			if(face.toString().equals("DOWN")) {
 				
-				for(int i)
 			}
 		}
 		if(bucket.equals(obsidian.HorizontalObsidianGen().getType())) {
